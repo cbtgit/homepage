@@ -1,11 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import LandingFooter from '../components/landing/LandingFooter.astro';
+import LandingHeader from '../components/landing/LandingHeader.astro';
+import LandingIntro from '../components/landing/LandingIntro.astro';
+import LandingWork from '../components/landing/LandingWork.astro';
+import '../styles/landing.css';
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Christian Bloch Thomsen | Freelance Frontend Developer"
+  description="Freelance senior frontend developer in Aarhus, Denmark with 25+ years of frontend experience delivering accessible, high-quality web interfaces and systems."
+>
+  <LandingHeader />
+  <main>
+    <LandingIntro />
+    <LandingWork />
+  </main>
+  <LandingFooter />
 </Layout>

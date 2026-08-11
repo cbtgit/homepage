@@ -1,0 +1,86 @@
+---
+import { projects } from './content';
+
+const [featured, secondary, tertiary] = projects;
+---
+
+<section class="work" id="work">
+  <div class="page-container work-inner desktop-only">
+    <header class="work-header">
+      <h2>Recent projects</h2>
+      <p>These are the three most recent projects I have worked on.</p>
+    </header>
+
+    <div class="work-grid-desktop">
+      <article class="project-card-featured">
+        <img src={featured.image} alt={featured.imageAlt} width="776" height="469" loading="lazy" />
+        <div class="project-caption project-caption-featured">
+          <div class="project-title-row">
+            <h3>{featured.title}</h3>
+            <img class="project-logo-unops" src="/unops-data.svg" alt="UNOPS Data logo" width="223" height="26" />
+          </div>
+          <p>{featured.summary}</p>
+        </div>
+      </article>
+
+      <div class="project-column-compact">
+        <article class="project-card-compact">
+          <img src={secondary.image} alt={secondary.imageAlt} width="440" height="297" loading="lazy" />
+          <div class="project-caption project-caption-compact">
+            <div class="project-title-row">
+              <h3>{secondary.title}</h3>
+              <img class="project-logo-aarsleff" src="/aarsleff-logo-white.svg" alt="Aarsleff logo" width="60" height="30" />
+            </div>
+            <p>{secondary.summary}</p>
+          </div>
+        </article>
+
+        <article class="project-card-compact project-card-jyske">
+          <img src={tertiary.image} alt={tertiary.imageAlt} width="592" height="271" loading="lazy" />
+          <div class="project-caption project-caption-compact">
+            <div class="project-title-row">
+              <h3>{tertiary.title}</h3>
+              <img class="project-logo-jyske" src="/jyske-bank-logo-white.svg" alt="Jyske Bank logo" width="155" height="24" />
+            </div>
+            <p>{tertiary.summary}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="work-mobile mobile-only">
+    <h2>Recent projects</h2>
+    <div class="mobile-work-list">
+      <article class="mobile-work-card mobile-work-unops">
+        <div class="mobile-work-content">
+          <div class="project-title-row">
+            <h3>{featured.title}</h3>
+            <img class="project-logo-unops" src="/unops-data.svg" alt="UNOPS Data logo" width="223" height="26" />
+          </div>
+          <p>{featured.summary}</p>
+        </div>
+      </article>
+
+      <article class="mobile-work-card mobile-work-aarsleff">
+        <div class="mobile-work-content">
+          <div class="project-title-row">
+            <h3>{secondary.title}</h3>
+            <img class="project-logo-aarsleff" src="/aarsleff-logo-white.svg" alt="Aarsleff logo" width="60" height="30" />
+          </div>
+          <p>{secondary.summary}</p>
+        </div>
+      </article>
+
+      <article class="mobile-work-card mobile-work-jyske">
+        <div class="mobile-work-content">
+          <div class="project-title-row">
+            <h3>{tertiary.title}</h3>
+            <img class="project-logo-jyske" src="/jyske-bank-logo-white.svg" alt="Jyske Bank logo" width="155" height="24" />
+          </div>
+          <p>{tertiary.summary}</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

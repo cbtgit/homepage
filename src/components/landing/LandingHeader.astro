@@ -1,0 +1,17 @@
+---
+import { navItems } from './content';
+---
+
+<header class="site-header">
+  <div class="desktop-nav-wrap">
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        {navItems.map((item) => (
+          <li><a href="#">{item.toLowerCase()}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <a class="cta cta-dark desktop-only" href="#">Get In Touch</a>
+  </div>
+</header>
+
