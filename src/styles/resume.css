@@ -5,12 +5,18 @@ body {
   .resume-page {
     background: var(--surface-page);
     padding: 28px 0 48px;
+    width: 100%;
   }
 
   .resume-shell {
     margin: 0 auto;
     max-width: var(--container-max);
     width: calc(100% - 128px);
+  }
+
+  .resume-artboard.page-container {
+    width: calc(100% - 128px);
+    max-width: var(--container-max);
   }
 
   .resume-artboard {
@@ -94,10 +100,20 @@ body {
     text-align: right;
   }
 
+  .resume-page,
+  .resume-artboard,
+  .resume-section,
+  .resume-entry,
+  .resume-subentry {
+    width: 100%;
+    max-width: none;
+  }
+
   .resume-section {
     padding-top: 34px;
     margin-top: 20px;
     border-top: 1px solid rgba(26, 26, 26, 0.14);
+    width: 100%;
   }
 
   .resume-section:first-of-type {
@@ -120,7 +136,9 @@ body {
     font-size: 16px;
     line-height: 1.6;
     margin: 0 0 12px;
+    max-width: none;
     padding-left: 18px;
+    width: 100%;
   }
 
   .resume-entry {
@@ -167,7 +185,12 @@ body {
       padding: 0;
     }
 
-    .resume-artboard {
+    .resume-artboard.page-container {
+    width: calc(100% - 128px);
+    max-width: var(--container-max);
+  }
+
+  .resume-artboard {
       width: 100% !important;
       max-width: none !important;
       margin: 0;
@@ -299,15 +322,21 @@ body {
 
   @media (max-width: 850px) {
     .resume-page {
-      padding: 18px 0 32px;
+      padding: 10px 0 20px;
     }
 
     .resume-shell {
       width: min(94vw, 760px);
     }
 
+    .resume-artboard.page-container {
+      width: calc(100% - 32px);
+      max-width: none;
+    }
+
     .resume-artboard {
-      padding: 28px 20px 32px;
+      padding: 18px 16px 22px;
+      width: calc(100% - 32px);
     }
 
     .resume-header,
