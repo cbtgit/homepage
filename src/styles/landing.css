@@ -809,8 +809,9 @@ body.drawer-open {
 
   .mobile-work-content .project-logo-unops {
     filter: brightness(0) invert(1);
-    height: auto;
     width: 92px;
+    max-width: 92px;
+    height: 11px;
   }
 
   .mobile-work-content .project-logo-aarsleff {
