@@ -282,15 +282,15 @@ body {
 
   .education-cert {
     display: block;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 1.35;
   }
 
   .education-meta {
     color: #4d4a47;
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
     line-height: 1.35;
     text-align: right;
