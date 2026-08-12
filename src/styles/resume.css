@@ -262,11 +262,15 @@ body {
     padding-top: 34px;
   }
 
+  .resume-section-education > h2 {
+    margin-left: 0;
+  }
+
   .education-row {
     display: block;
     color: #1a1a1a;
     font-size: 16px;
-    margin-bottom: 8px;
+    margin: 0 0 8px 18px;
   }
 
   .education-entry-line {
