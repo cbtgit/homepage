@@ -1,0 +1,39 @@
+name: Deploy Astro to VPS
+
+on:
+  push:
+    branches:
+      - master # Skift til main, hvis din hoved-branch hedder det
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Hent koden fra GitHub
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 2. Opsæt Node.js-miljø
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20' # Eller den Node-version du bruger lokalt
+        cache: 'npm'
+
+    # 3. Installer afhængigheder og byg Astro (genererer mappen /dist)
+    - name: Install and Build
+      run: |
+        npm ci
+        npm run build
+
+    # 4. Overfør de byggede filer til din VPS via SSH og rsync
+    - name: Deploy to VPS via SSH
+      uses: easingthemes/ssh-deploy@main
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.VPS_SSH_KEY }}
+        REMOTE_HOST: ${{ secrets.VPS_HOST }}
+        REMOTE_USER: ${{ secrets.VPS_USER }}
+        SOURCE: "dist/" # Astro gemmer standard de færdige filer i 'dist/'
+        TARGET: "/var/www/homepage/dist" # SKIFT DETTE til stien på din Nginx-mappe på din VPS
+        EXCLUDE: "/node_modules/"
