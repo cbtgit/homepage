@@ -8,6 +8,25 @@ const {
   title = 'Frontend Freelance',
   description = 'Christian Bloch Thomsen is a freelance senior frontend developer and consultant based in Aarhus, delivering robust, accessible interfaces and frontend systems.',
 } = Astro.props;
+
+const siteUrl = 'https://frontend-freelance.dk';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const socialImageUrl = new URL('/cth.jpg', siteUrl).toString();
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${siteUrl}/#person`,
+  name: 'Christian Bloch Thomsen',
+  url: siteUrl,
+  image: socialImageUrl,
+  jobTitle: 'Freelance Frontend Developer',
+  description,
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Frontend Freelance',
+    url: siteUrl,
+  },
+};
 ---
 
 <!doctype html>
@@ -18,7 +37,24 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Christian Bloch Thomsen" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:locale" content="en_DK" />
+    <meta property="og:site_name" content="Frontend Freelance" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content="Christian Bloch Thomsen" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content="Christian Bloch Thomsen" />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&display=swap" />

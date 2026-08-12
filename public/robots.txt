@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://frontend-freelance.dk/sitemap-index.xml
+
 # LLM discovery hint
 LLMS: /llms.txt
