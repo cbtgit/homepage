@@ -2,31 +2,6 @@ body {
     background: var(--surface-page);
   }
 
-  .resume-page {
-    background: var(--surface-page);
-    padding: 28px 0 48px;
-    width: 100%;
-  }
-
-  .resume-shell {
-    margin: 0 auto;
-    max-width: var(--container-max);
-    width: calc(100% - 128px);
-  }
-
-  .resume-artboard {
-    background: var(--surface-page);
-    box-sizing: border-box;
-    color: #1a1a1a;
-    font-family: 'Arial', 'Helvetica Neue', sans-serif;
-    line-height: 1.4;
-    margin: 0 auto;
-    max-width: var(--container-max);
-    padding: 32px 0 52px;
-    width: calc(100% - 128px);
-    min-height: 1372px;
-  }
-
   .resume-header {
     align-items: center;
     border-bottom: 1px solid #d7d1c9;
@@ -95,8 +70,16 @@ body {
     text-align: right;
   }
 
-  .resume-page,
-  .resume-section,
+  main > article {
+    background: var(--surface-card);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--container-max);
+    width: calc(100% - 128px);
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .resume-entry,
   .resume-subentry {
     width: 100%;
@@ -107,7 +90,6 @@ body {
     padding-top: 34px;
     margin-top: 20px;
     border-top: 1px solid rgba(26, 26, 26, 0.14);
-    width: 100%;
   }
 
   .resume-section:first-of-type {
@@ -154,6 +136,10 @@ body {
     padding-top: 4px;
   }
 
+  .resume-subentry {
+    width: calc(100% - 46px);
+  }
+
   .resume-subentry > p {
     margin-bottom: 10px;
   }
@@ -175,16 +161,11 @@ body {
       background: #ffffff;
     }
 
-    .resume-page {
-      padding: 0;
-    }
-
-    .resume-artboard {
-      width: 100% !important;
-      max-width: none !important;
-      margin: 0;
-      padding: 0;
-      min-height: auto;
+    main > article {
+      max-width: none;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -238,7 +219,7 @@ body {
   }
 
   .toolbox-table {
-    width: 100%;
+    width: calc(100% - 18px);
     max-width: 100%;
     margin-left: 18px;
   }
@@ -314,23 +295,16 @@ body {
       overflow-x: hidden;
     }
 
-    .resume-page {
-      margin: 0;
-      max-width: 100%;
-      padding: 0;
-      width: 100%;
-    }
-
-    .resume-artboard {
-      margin: 0 auto;
-      max-width: none;
-      padding: 18px 14px 22px;
-      width: calc(100% - 48px);
-    }
 
     .resume-header h1 {
       font-size: clamp(24px, 7vw, 34px);
       white-space: normal;
+    }
+
+    main > article {
+      width: calc(100% - 48px);
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     .resume-header,
@@ -338,6 +312,16 @@ body {
     .education-row {
       align-items: flex-start;
       flex-direction: column;
+    }
+
+    .education-entry-line {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .education-meta {
+      text-align: left;
+      white-space: normal;
     }
 
     .resume-contact {
@@ -366,7 +350,6 @@ body {
 
     .resume-section p {
       padding-left: 10px;
-      width: auto;
     }
 
     .resume-entry {
@@ -376,6 +359,10 @@ body {
     .resume-subentry {
       margin-left: 12px;
       padding-left: 10px;
+    }
+
+    .resume-subentry {
+      width: calc(100% - 22px);
     }
 
     .education-row {
@@ -389,6 +376,7 @@ body {
 
     .toolbox-table {
       margin-left: 0;
+      width: 100%;
     }
 
     .toolbox-row {

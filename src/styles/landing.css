@@ -893,11 +893,6 @@ body.drawer-open {
 
 
 
-.resume-page {
-  background: #fff;
-  padding: 0;
-}
-
 .resume-pdf-wrapper {
   background: #fff;
   display: flex;
@@ -927,10 +922,6 @@ body.drawer-open {
   .site-header,
   .site-footer {
     display: none \!important;
-  }
-
-  .resume-page {
-    padding: 0;
   }
 
   .resume-shell {
