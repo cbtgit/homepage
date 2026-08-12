@@ -120,12 +120,14 @@ body {
     font-size: 16px;
     line-height: 1.6;
     margin: 0 0 12px;
+    padding-left: 18px;
   }
 
   .resume-entry {
     border-top: 1px solid rgba(26, 26, 26, 0.14);
     padding-top: 14px;
     margin-top: 18px;
+    padding-left: 18px;
   }
 
   .resume-entry:first-of-type {
@@ -136,7 +138,7 @@ body {
 
   .resume-subentry {
     margin: 18px 0 0 28px;
-    padding-left: 0;
+    padding-left: 18px;
     padding-top: 4px;
   }
 
@@ -225,7 +227,7 @@ body {
   .toolbox-table {
     width: 100%;
     max-width: 100%;
-    margin-left: 0;
+    margin-left: 18px;
   }
 
   .toolbox-head {
