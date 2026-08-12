@@ -1,16 +1,54 @@
 ---
 import { navItems } from './content';
+
+const currentPath = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.replace(/\/$/, '');
+const navEntries = navItems.map((item) => {
+  const href = item.href === '/' ? '/' : item.href.replace(/\/$/, '');
+  return { ...item, isActive: currentPath === href };
+});
 ---
 
 <header class="site-header">
   <div class="desktop-nav-wrap">
-    <nav aria-label="Main navigation">
+    <nav class="desktop-nav" aria-label="Main navigation">
       <ul class="nav-list">
-        {navItems.map((item) => (
-          <li><a href={item.href}>{item.label.toLowerCase()}</a></li>
+        {navEntries.map((item) => (
+          <li class="nav-item">
+            <a
+              href={item.href}
+              class:list={['nav-link', { 'is-active': item.isActive }]}
+              aria-current={item.isActive ? 'page' : undefined}
+            >
+              {item.label.toLowerCase()}
+            </a>
+          </li>
         ))}
       </ul>
+      <span class="nav-indicator" aria-hidden="true"></span>
     </nav>
     <a class="cta cta-dark desktop-only" href="#">Get In Touch</a>
   </div>
 </header>
+
+<script>
+  const desktopNav = document.querySelector('.desktop-nav');
+  const navIndicator = document.querySelector('.nav-indicator');
+
+  const updateNavIndicator = () => {
+    if (!desktopNav || !navIndicator) return;
+
+    const activeLink = desktopNav.querySelector('.nav-link.is-active');
+    if (!activeLink) return;
+
+    const navRect = desktopNav.getBoundingClientRect();
+    const linkRect = activeLink.getBoundingClientRect();
+    const width = Math.max(linkRect.width, 28);
+
+    navIndicator.style.width = `${width}px`;
+    navIndicator.style.transform = `translateX(${linkRect.left - navRect.left}px)`;
+  };
+
+  window.addEventListener('load', updateNavIndicator);
+  window.addEventListener('resize', updateNavIndicator);
+  updateNavIndicator();
+</script>
