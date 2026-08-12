@@ -7,11 +7,10 @@ import { navItems } from './content';
     <nav aria-label="Main navigation">
       <ul class="nav-list">
         {navItems.map((item) => (
-          <li><a href="#">{item.toLowerCase()}</a></li>
+          <li><a href={item.href}>{item.label.toLowerCase()}</a></li>
         ))}
       </ul>
     </nav>
     <a class="cta cta-dark desktop-only" href="#">Get In Touch</a>
   </div>
 </header>
-

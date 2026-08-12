@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LandingFooter from '../components/landing/LandingFooter.astro';
+import LandingHeader from '../components/landing/LandingHeader.astro';
+import EarlyCareer from '../components/resume/EarlyCareer.astro';
+import MidCareer from '../components/resume/MidCareer.astro';
+import PresentCareer from '../components/resume/PresentCareer.astro';
+import ResumeEducation from '../components/resume/ResumeEducation.astro';
+import ResumeHeader from '../components/resume/ResumeHeader.astro';
+import ResumeSummary from '../components/resume/ResumeSummary.astro';
+import ResumeToolbox from '../components/resume/ResumeToolbox.astro';
+import '../styles/landing.css';
+import '../styles/resume.css';
+---
+
+<Layout
+  title="Christian Bloch Thomsen | Resume"
+  description="Resume of Christian Bloch Thomsen, freelance frontend developer and consultant."
+>
+  <LandingHeader />
+  <main class="resume-page">
+    <article class="resume-artboard page-container">
+      <ResumeHeader />
+      <ResumeSummary />
+      <EarlyCareer />
+      <MidCareer />
+      <PresentCareer />
+      <ResumeToolbox />
+      <ResumeEducation />
+    </article>
+  </main>
+  <LandingFooter />
+</Layout>

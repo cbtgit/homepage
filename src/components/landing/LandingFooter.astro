@@ -22,7 +22,7 @@ import { navItems, socialItems } from './content';
         <h3>Navigation</h3>
         <ul>
           {navItems.map((item) => (
-            <li><a href="#">{item}</a></li>
+            <li><a href={item.href}>{item.label}</a></li>
           ))}
         </ul>
       </section>
@@ -55,7 +55,7 @@ import { navItems, socialItems } from './content';
         <h3>Navigation</h3>
         <ul>
           {navItems.map((item) => (
-            <li><a href="#">{item}</a></li>
+            <li><a href={item.href}>{item.label}</a></li>
           ))}
         </ul>
       </section>

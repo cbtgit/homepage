@@ -1,4 +1,8 @@
-export const navItems = ['Home', 'Projects', 'Resume'];
+export const navItems = [
+  { label: 'Home', href: '/' },
+  // { label: 'Projects', href: '/#work' },
+  { label: 'Resume', href: '/resume' },
+];
 
 export const metaRows = [
   { label: 'Location', value: 'Aarhus, Denmark' },

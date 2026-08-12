@@ -851,3 +851,53 @@ body.drawer-open {
   padding: 0;
   width: calc((100% - 24px) / 3);
 }
+
+
+
+
+.resume-page {
+  background: #fff;
+  padding: 0;
+}
+
+.resume-pdf-wrapper {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
+  width: 100%;
+}
+
+.resume-pdf {
+  background: #fff;
+  border: 0;
+  display: block;
+  height: 100vh;
+  min-height: 900px;
+  width: min(100vw, 900px);
+}
+
+@media (max-width: 900px) {
+  .resume-pdf {
+    height: 100vh;
+    min-height: 760px;
+    width: 100vw;
+  }
+}
+@media print {
+  .site-header,
+  .site-footer {
+    display: none \!important;
+  }
+
+  .resume-page {
+    padding: 0;
+  }
+
+  .resume-shell {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
