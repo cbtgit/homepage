@@ -14,11 +14,6 @@ body {
     width: calc(100% - 128px);
   }
 
-  .resume-artboard.page-container {
-    width: calc(100% - 128px);
-    max-width: var(--container-max);
-  }
-
   .resume-artboard {
     background: var(--surface-page);
     box-sizing: border-box;
@@ -101,7 +96,6 @@ body {
   }
 
   .resume-page,
-  .resume-artboard,
   .resume-section,
   .resume-entry,
   .resume-subentry {
@@ -185,12 +179,7 @@ body {
       padding: 0;
     }
 
-    .resume-artboard.page-container {
-    width: calc(100% - 128px);
-    max-width: var(--container-max);
-  }
-
-  .resume-artboard {
+    .resume-artboard {
       width: 100% !important;
       max-width: none !important;
       margin: 0;
@@ -320,35 +309,82 @@ body {
     text-align: right;
     white-space: nowrap;
   }
-
   @media (max-width: 850px) {
+    body {
+      overflow-x: hidden;
+    }
+
     .resume-page {
-      padding: 10px 0 20px;
-    }
-
-    .resume-shell {
-      width: min(94vw, 760px);
-    }
-
-    .resume-artboard.page-container {
-      width: calc(100% - 32px);
-      max-width: none;
+      margin: 0;
+      max-width: 100%;
+      padding: 0;
+      width: 100%;
     }
 
     .resume-artboard {
-      padding: 18px 16px 22px;
-      width: calc(100% - 32px);
+      margin: 0 auto;
+      max-width: none;
+      padding: 18px 14px 22px;
+      width: calc(100% - 48px);
+    }
+
+    .resume-header h1 {
+      font-size: clamp(24px, 7vw, 34px);
+      white-space: normal;
     }
 
     .resume-header,
     .resume-entry-header,
     .education-row {
-      flex-direction: column;
       align-items: flex-start;
+      flex-direction: column;
     }
 
     .resume-contact {
       text-align: left;
+    }
+
+    .resume-section h2 {
+      font-size: 14px;
+      letter-spacing: 0.16em;
+    }
+
+    .resume-section p,
+    .resume-subentry > p,
+    .toolbox-row,
+    .education-row,
+    .education-cert,
+    .resume-company,
+    .resume-meta {
+      font-size: 16px !important;
+      line-height: 1.55;
+    }
+
+    .resume-meta {
+      font-size: 12px;
+    }
+
+    .resume-section p {
+      padding-left: 10px;
+      width: auto;
+    }
+
+    .resume-entry {
+      padding-left: 10px;
+    }
+
+    .resume-subentry {
+      margin-left: 12px;
+      padding-left: 10px;
+    }
+
+    .education-row {
+      margin-left: 8px;
+    }
+
+    .tech-badges {
+      margin-left: 10px;
+      max-width: calc(100% - 10px);
     }
 
     .toolbox-table {
@@ -356,7 +392,7 @@ body {
     }
 
     .toolbox-row {
-      grid-template-columns: 1.7fr 1fr 0.8fr;
       gap: 10px;
+      grid-template-columns: 1.7fr 1fr 0.8fr;
     }
   }
