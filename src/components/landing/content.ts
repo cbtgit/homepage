@@ -2,6 +2,7 @@ export const navItems = [
   { label: 'Home', href: '/' },
   // { label: 'Projects', href: '/#work' },
   { label: 'Resume', href: '/resume' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export const metaRows = [

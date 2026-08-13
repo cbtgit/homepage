@@ -87,7 +87,7 @@ body {
   }
 
   .resume-section {
-    padding-top: 34px;
+    padding-top: 14px;
     margin-top: 20px;
     border-top: 1px solid rgba(26, 26, 26, 0.14);
   }
@@ -215,7 +215,7 @@ body {
   }
 
   .resume-section-toolbox {
-    padding-top: 34px;
+    padding-top: 14px;
   }
 
   .toolbox-table {
@@ -253,7 +253,7 @@ body {
   }
 
   .resume-section-education {
-    padding-top: 34px;
+    padding-top: 14px;
   }
 
   .resume-section-education > h2 {
@@ -291,6 +291,10 @@ body {
     white-space: nowrap;
   }
   @media (max-width: 850px) {
+    .resume-kicker {
+      padding-top: 12px;
+    }
+
     body {
       overflow-x: hidden;
     }
