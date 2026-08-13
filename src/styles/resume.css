@@ -87,7 +87,7 @@ body {
   }
 
   .resume-section {
-    padding-top: 14px;
+    padding-top: 24px;
     margin-top: 20px;
     border-top: 1px solid rgba(26, 26, 26, 0.14);
   }
@@ -215,7 +215,7 @@ body {
   }
 
   .resume-section-toolbox {
-    padding-top: 14px;
+    padding-top: 24px;
   }
 
   .toolbox-table {
@@ -252,44 +252,6 @@ body {
     text-align: right;
   }
 
-  .resume-section-education {
-    padding-top: 14px;
-  }
-
-  .resume-section-education > h2 {
-    margin-left: 0;
-  }
-
-  .education-row {
-    display: block;
-    color: #1a1a1a;
-    font-size: 16px;
-    margin: 0 0 8px 18px;
-  }
-
-  .education-entry-line {
-    align-items: baseline;
-    display: flex;
-    gap: 16px;
-    justify-content: space-between;
-  }
-
-  .education-cert {
-    display: block;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.35;
-  }
-
-  .education-meta {
-    color: #4d4a47;
-    display: block;
-    font-size: 14px;
-    font-style: italic;
-    line-height: 1.35;
-    text-align: right;
-    white-space: nowrap;
-  }
   @media (max-width: 850px) {
     .resume-kicker {
       padding-top: 12px;
@@ -312,20 +274,9 @@ body {
     }
 
     .resume-header,
-    .resume-entry-header,
-    .education-row {
+    .resume-entry-header {
       align-items: flex-start;
       flex-direction: column;
-    }
-
-    .education-entry-line {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    .education-meta {
-      text-align: left;
-      white-space: normal;
     }
 
     .resume-contact {
@@ -340,8 +291,6 @@ body {
     .resume-section p,
     .resume-subentry > p,
     .toolbox-row,
-    .education-row,
-    .education-cert,
     .resume-company,
     .resume-meta {
       font-size: 16px !important;
@@ -367,10 +316,6 @@ body {
 
     .resume-subentry {
       width: calc(100% - 22px);
-    }
-
-    .education-row {
-      margin-left: 8px;
     }
 
     .tech-badges {
