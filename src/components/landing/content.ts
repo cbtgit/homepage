@@ -50,4 +50,8 @@ export const projects = [
   },
 ];
 
-export const socialItems = ['LinkedIn', 'GitHub', 'Email'];
+export const socialItems = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/christianbloch/' },
+  { label: 'GitHub', href: '#' },
+  { label: 'Email', href: 'mailto:cblochth@gmail.com' },
+];

@@ -107,7 +107,12 @@ body.drawer-open {
   left: 0;
   pointer-events: none;
   position: absolute;
+  visibility: hidden;
+}
+
+.nav-indicator[data-ready] {
   transition: transform 220ms ease, width 220ms ease;
+  visibility: visible;
 }
 
 .nav-list a,
@@ -541,7 +546,7 @@ body.drawer-open {
 
 .project-logo-unops {
   filter: brightness(0) invert(1);
-  height: 38px;
+  height: 19px;
 }
 
 .project-logo-aarsleff {

@@ -8,7 +8,7 @@ const navEntries = navItems.map((item) => {
 });
 ---
 
-<header class="site-header">
+<header class="site-header" transition:persist="site-header">
   <div class="desktop-nav-wrap">
     <nav class="desktop-nav" aria-label="Main navigation">
       <ul class="nav-list">
@@ -48,7 +48,22 @@ const navEntries = navItems.map((item) => {
     navIndicator.style.transform = `translateX(${linkRect.left - navRect.left}px)`;
   };
 
-  window.addEventListener('load', updateNavIndicator);
+  const syncNavigation = () => {
+    const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+
+    desktopNav?.querySelectorAll<HTMLAnchorElement>('.nav-link').forEach((link) => {
+      const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+      const isActive = linkPath === currentPath;
+
+      link.classList.toggle('is-active', isActive);
+      link.toggleAttribute('aria-current', isActive);
+    });
+
+    updateNavIndicator();
+  };
+
   window.addEventListener('resize', updateNavIndicator);
-  updateNavIndicator();
+  document.addEventListener('astro:after-swap', syncNavigation);
+  syncNavigation();
+  navIndicator?.setAttribute('data-ready', '');
 </script>

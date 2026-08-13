@@ -10,11 +10,6 @@ import { navItems, socialItems } from './content';
         Quality work, dependable delivery, and frontend systems built to
         last.
       </p>
-      <div class="social-pills">
-        {socialItems.map((item) => (
-          <a href="#">{item}</a>
-        ))}
-      </div>
     </section>
 
     <div class="footer-links-wrap">
@@ -30,8 +25,8 @@ import { navItems, socialItems } from './content';
       <section>
         <h3>Connect</h3>
         <ul>
-          {socialItems.map((item) => (
-            <li><a href="#">{item}</a></li>
+          {socialItems.filter((item) => item.label !== 'GitHub').map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
           ))}
         </ul>
       </section>
@@ -46,7 +41,7 @@ import { navItems, socialItems } from './content';
 
     <div class="social-pills">
       {socialItems.map((item) => (
-        <a href="#">{item}</a>
+        <a href={item.href}>{item.label}</a>
       ))}
     </div>
 
@@ -64,7 +59,7 @@ import { navItems, socialItems } from './content';
         <h3>Connect</h3>
         <ul>
           {socialItems.map((item) => (
-            <li><a href="#">{item}</a></li>
+            <li><a href={item.href}>{item.label}</a></li>
           ))}
         </ul>
       </section>
