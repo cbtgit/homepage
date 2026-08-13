@@ -39,12 +39,6 @@ import { navItems, socialItems } from './content';
       Quality work, dependable delivery, and frontend systems built to last.
     </p>
 
-    <div class="social-pills">
-      {socialItems.map((item) => (
-        <a href={item.href}>{item.label}</a>
-      ))}
-    </div>
-
     <div class="footer-links-wrap">
       <section>
         <h3>Navigation</h3>
@@ -58,7 +52,7 @@ import { navItems, socialItems } from './content';
       <section>
         <h3>Connect</h3>
         <ul>
-          {socialItems.map((item) => (
+          {socialItems.filter((item) => item.label !== 'GitHub').map((item) => (
             <li><a href={item.href}>{item.label}</a></li>
           ))}
         </ul>
