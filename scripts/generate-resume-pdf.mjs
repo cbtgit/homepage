@@ -34,7 +34,7 @@ async function waitForServer() {
 }
 
 function stopServer() {
-  if (\!serverExited && server.pid) {
+  if (!serverExited && server.pid) {
     // negative pid signals the whole detached process group, killing astro's child too
     try {
       process.kill(-server.pid, 'SIGTERM');
