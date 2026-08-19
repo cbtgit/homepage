@@ -28,8 +28,19 @@ jobs:
         npm run build
 
     # 4. Generer en frisk PDF-udgave af CV'et ud fra print-visningen af /resume
+    - name: Get installed Playwright version
+      id: playwright-version
+      run: echo "version=$(node -p "require('./package.json').devDependencies.playwright")" >> "$GITHUB_OUTPUT"
+
+    - name: Cache Playwright browsers
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-chromium-${{ steps.playwright-version.outputs.version }}
+
+    # ubuntu-latest runners already ship the shared libs Chromium needs, so skip --with-deps
     - name: Install Playwright Chromium
-      run: npx playwright install --with-deps chromium
+      run: npx playwright install chromium
 
     - name: Generate Resume PDF
       run: npm run generate:resume-pdf
