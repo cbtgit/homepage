@@ -13,8 +13,6 @@ function log(message) {
   console.log('[resume-pdf] ' + new Date().toISOString() + ' ' + message);
 }
 
-log('Removing stale public PDF');
-await rm(PUBLIC_OUTPUT_PATH, { force: true });
 log('Starting Astro preview server');
 
 const server = spawn('npx', ['astro', 'preview', '--host', HOST, '--port', String(PORT)], {
