@@ -179,6 +179,12 @@ body {
       page-break-inside: avoid;
     }
 
+    /* entries that contain their own sub-entries (e.g. SYMFONI) may span pages */
+    .resume-entry:has(.resume-subentry) {
+      break-inside: auto;
+      page-break-inside: auto;
+    }
+
     .resume-section h2 {
       break-after: avoid;
       page-break-after: avoid;
