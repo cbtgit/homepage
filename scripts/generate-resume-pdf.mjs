@@ -53,7 +53,12 @@ try {
   await page.goto(URL, { waitUntil: 'networkidle' });
   await page.emulateMedia({ media: 'print' });
   await page.evaluate(() => document.fonts.ready);
-  await page.pdf({ path: OUTPUT_PATH, format: 'A4', printBackground: true });
+  await page.pdf({
+    path: OUTPUT_PATH,
+    format: 'A4',
+    printBackground: true,
+    margin: { top: '0.5in', bottom: '0.5in', left: '0.5in', right: '0.5in' },
+  });
 } catch (error) {
   console.error(error);
   process.exitCode = 1;
