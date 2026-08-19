@@ -45,6 +45,11 @@ jobs:
     - name: Generate Resume PDF
       run: npm run generate:resume-pdf
 
+    - name: Verify Resume PDF
+      run: |
+        test -s 'dist/Christian Bloch Thomsen_Resume.pdf'
+        ls -lh 'dist/Christian Bloch Thomsen_Resume.pdf'
+
     # 5. Overfør de byggede filer til din VPS via SSH og rsync
     - name: Deploy to VPS via SSH
       uses: easingthemes/ssh-deploy@main
