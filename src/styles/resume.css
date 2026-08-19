@@ -332,7 +332,7 @@ body {
     width: 20%;
   }
 
-  @media (max-width: 850px) {
+  @media screen and (max-width: 850px) {
     .resume-kicker {
       padding-top: 12px;
     }
