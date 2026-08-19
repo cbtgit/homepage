@@ -189,6 +189,16 @@ body {
       break-after: avoid;
       page-break-after: avoid;
     }
+
+    .toolbox-category {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .toolbox-category-table tr {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
   }
 
   .resume-entry-header {
@@ -240,38 +250,77 @@ body {
     padding-top: 24px;
   }
 
-  .toolbox-table {
-    width: calc(100% - 18px);
-    max-width: 100%;
+  .toolbox-categories {
     margin-left: 18px;
+    max-width: 100%;
+    width: calc(100% - 18px);
   }
 
-  .toolbox-head {
+  .toolbox-category {
+    break-inside: avoid;
+    margin-top: 14px;
+    page-break-inside: avoid;
+    padding-top: 12px;
+  }
+
+  .toolbox-category:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .toolbox-category-header h3 {
     color: #1a1a1a;
     font-size: 16px;
     font-weight: 700;
+    letter-spacing: 0.01em;
+    margin: 0 0 8px;
   }
 
-  .toolbox-row {
-    display: grid;
-    grid-template-columns: 1.7fr 1fr 0.8fr;
-    gap: 18px;
-    padding: 7px 0;
-    font-size: 16px;
-    color: #1a1a1a;
+  .toolbox-category-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .toolbox-category-table th,
+  .toolbox-category-table td {
     border-bottom: 1px solid rgba(26, 26, 26, 0.12);
+    color: #1a1a1a;
+    font-size: 16px;
+    min-width: 0;
+    padding: 7px 0;
+    text-align: left;
   }
 
-  .toolbox-row:last-child {
+  .toolbox-category-table th {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .toolbox-category-table tbody tr:last-child td {
     border-bottom: none;
   }
 
-  .toolbox-row > div {
-    min-width: 0;
+  .toolbox-category-table .num {
+    text-align: right;
+    white-space: nowrap;
   }
 
-  .toolbox-row > div:last-child {
-    text-align: right;
+  .toolbox-category-table th:nth-child(1),
+  .toolbox-category-table td:nth-child(1) {
+    width: 50%;
+  }
+
+  .toolbox-category-table th:nth-child(2),
+  .toolbox-category-table td:nth-child(2) {
+    width: 30%;
+  }
+
+  .toolbox-category-table th:nth-child(3),
+  .toolbox-category-table td:nth-child(3) {
+    width: 20%;
   }
 
   @media (max-width: 850px) {
@@ -312,7 +361,8 @@ body {
 
     .resume-section p,
     .resume-subentry > p,
-    .toolbox-row,
+    .toolbox-category-table th,
+    .toolbox-category-table td,
     .resume-company,
     .resume-meta {
       font-size: 16px !important;
@@ -345,13 +395,14 @@ body {
       max-width: calc(100% - 10px);
     }
 
-    .toolbox-table {
+    .toolbox-categories {
       margin-left: 0;
       width: 100%;
     }
 
-    .toolbox-row {
-      gap: 10px;
-      grid-template-columns: 1.7fr 1fr 0.8fr;
+    .toolbox-category-table th,
+    .toolbox-category-table td {
+      font-size: 14px !important;
+      padding: 6px 0;
     }
   }
