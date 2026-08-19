@@ -65,9 +65,14 @@ body {
     color: #3d3b39;
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.55;
     text-align: right;
+  }
+
+  .resume-contact a {
+    color: inherit;
+    text-decoration: none;
   }
 
   main > article {
@@ -188,6 +193,10 @@ body {
     .resume-section h2 {
       break-after: avoid;
       page-break-after: avoid;
+    }
+
+    .resume-contact {
+      font-size: 14px;
     }
 
     .toolbox-category {
