@@ -87,9 +87,14 @@ body {
   }
 
   .resume-section {
-    padding-top: 24px;
+    padding-top: 20px;
     margin-top: 20px;
     border-top: 1px solid rgba(26, 26, 26, 0.14);
+  }
+
+  .resume-section-education {
+    margin-bottom: 32px;
+    padding-bottom: 8px;
   }
 
   .resume-section:first-of-type {
@@ -119,7 +124,7 @@ body {
 
   .resume-entry {
     border-top: 1px solid rgba(26, 26, 26, 0.14);
-    padding-top: 14px;
+    padding-top: 18px;
     margin-top: 18px;
     padding-left: 18px;
   }
