@@ -6,8 +6,8 @@ import { chromium } from 'playwright';
 const PORT = 4322;
 const HOST = '127.0.0.1';
 const URL = `http://${HOST}:${PORT}/resume`;
-const OUTPUT_PATH = 'dist/Christian Bloch Thomsen _ Resume.pdf';
-const PUBLIC_OUTPUT_PATH = 'public/Christian Bloch Thomsen_Resume.pdf';
+const OUTPUT_PATH = 'dist/resume.pdf';
+const PUBLIC_OUTPUT_PATH = 'public/resume.pdf';
 
 function log(message) {
   console.log('[resume-pdf] ' + new Date().toISOString() + ' ' + message);

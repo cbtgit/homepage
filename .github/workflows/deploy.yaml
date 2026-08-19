@@ -47,8 +47,16 @@ jobs:
 
     - name: Verify Resume PDF
       run: |
-        test -s 'dist/Christian Bloch Thomsen_Resume.pdf'
-        ls -lh 'dist/Christian Bloch Thomsen_Resume.pdf'
+        echo "Checking dist directory contents:"
+        ls -lh dist/ | head -20
+        echo ""
+        if [ -f "dist/resume.pdf" ]; then
+          echo "PDF found:"
+          ls -lh "dist/resume.pdf"
+        else
+          echo "ERROR: PDF not found in dist"
+          exit 1
+        fi
 
     # 5. Overfør de byggede filer til din VPS via SSH og rsync
     - name: Deploy to VPS via SSH
