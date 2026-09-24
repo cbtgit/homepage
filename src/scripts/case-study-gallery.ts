@@ -60,7 +60,7 @@ function initializeGallery(gallery: HTMLElement): void {
   const state: GalleryState = {
     tabs: Array.from(gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-tab]')),
     panels: Array.from(gallery.querySelectorAll<HTMLElement>('[data-gallery-panel]')),
-    status: gallery.querySelector('[data-gallery-status]'),
+    status: gallery.querySelector<HTMLElement>('[data-gallery-status]'),
     activeIndex: 0,
   };
   const activate: ActivateSlide = (index, moveFocus) => activateSlide(state, index, moveFocus);

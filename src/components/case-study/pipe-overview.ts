@@ -2,7 +2,7 @@ export const pipeOverview = {
   eyebrow: 'Project details / Per Aarsleff Pipe Overview',
   title: 'One overview for complex pipe renovation projects.',
   description:
-    'Internal business application for Denmarks largest construction and civil engineering group Per Aarsleff or their sewer/pipe renovation business. It brings main pipes, laterals, and subprojects into a shared workspace, with tools for importing and reviewing inspection data, updating project records, and coordinating work as plans change. The application lives inside their Microsoft Dynamics 365 application as a web ressource',
+    "Internal business application for Denmark's largest construction and civil engineering group Per Aarsleff or their sewer/pipe renovation business. It brings main pipes, laterals, and subprojects into a shared workspace, with tools for importing and reviewing inspection data, updating project records, and coordinating work as plans change. The application lives inside their Microsoft Dynamics 365 application as a web resource.",
   facts: [
     { label: 'Role', value: 'Senior frontend developer' },
     { label: 'Focus', value: 'Architecture and implementation' },
@@ -103,7 +103,7 @@ export const pipeOverview = {
     {
       category: 'Platform',
       name: 'Dynamics 365 and Dataverse',
-      description: 'The web application integrates with the customers Microsoft Dataverse backend',
+      description: "The web application integrates with the customer's Microsoft Dataverse backend.",
     },
     {
       category: 'Localization',
