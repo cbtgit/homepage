@@ -23,7 +23,7 @@ export const technologies = [
   'Tailwind',
   'Vite',
   'TanStack',
-  'Copilot',
+  'GitHub Copilot',
 ];
 
 export const projects = [

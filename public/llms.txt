@@ -30,7 +30,7 @@ He has 25+ years of frontend development experience and 15+ years of consulting 
 - Tailwind
 - Vite
 - TanStack
-- Copilot
+- GitHub Copilot
 
 ## Location and Availability
 - Location: Aarhus, Denmark
