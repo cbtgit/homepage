@@ -449,12 +449,10 @@ body.drawer-open {
 .work-grid-desktop {
   display: grid;
   column-gap: 64px;
-  row-gap: 24px;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.project-card-featured,
-.project-card-compact {
+.project-card-featured {
   border-radius: var(--radius-project);
   box-shadow: 0 24px 64px rgba(6, 16, 29, 0.22);
   overflow: clip;
@@ -466,17 +464,7 @@ body.drawer-open {
   height: 560px;
 }
 
-.project-card-compact {
-  height: 268px;
-}
-
-.project-column-compact {
-  display: grid;
-  gap: 24px;
-}
-
-.project-card-featured > img,
-.project-card-compact > img {
+.project-card-featured > img {
   height: 100%;
   inset: 0;
   object-fit: cover;
@@ -505,18 +493,6 @@ body.drawer-open {
   grid-template-columns: minmax(0, 1fr) 149px;
 }
 
-.project-caption-compact {
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 10px 20px 12px;
-}
-
-.project-caption-compact .project-title-row {
-  grid-template-columns: minmax(0, 1fr) 92px;
-}
-
 .project-title-row {
   align-items: center;
   column-gap: 12px;
@@ -533,11 +509,6 @@ body.drawer-open {
   margin: 0;
 }
 
-.project-caption-compact .project-title-row h3 {
-  font-size: 22px;
-  line-height: 0.95;
-}
-
 .project-title-row img {
   display: block;
   justify-self: end;
@@ -551,21 +522,6 @@ body.drawer-open {
 
 .project-logo-aarsleff {
   height: 30px;
-}
-
-.project-logo-jyske {
-  height: 19px;
-}
-
-.project-card-jyske .project-caption {
-  background: var(--surface-overlay);
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.project-card-jyske .project-logo-jyske {
-  background: rgba(255, 255, 255, 0.88);
-  border-radius: 8px;
-  padding: 4px 6px;
 }
 
 .project-title-row span {
@@ -584,10 +540,12 @@ body.drawer-open {
   max-width: 620px;
 }
 
-.project-caption-compact p {
-  font-size: 13px;
-  line-height: 22px;
-  max-width: 420px;
+.project-detail-link {
+  align-self: flex-start;
+  color: var(--text-inverse);
+  font-size: 14px;
+  font-weight: 600;
+  text-underline-offset: 4px;
 }
 
 .site-footer {
@@ -777,17 +735,6 @@ body.drawer-open {
     border-color: #28425b;
   }
 
-  .mobile-work-jyske {
-    background-image: linear-gradient(160deg, oklab(31.1% -0.007 -0.034), oklab(35.4% -0.006 -0.031));
-    border-color: #394557;
-  }
-
-  .mobile-work-jyske .mobile-work-content .project-logo-jyske {
-    background: rgba(255, 255, 255, 0.88);
-    border-radius: 8px;
-    padding: 3px 6px;
-  }
-
   .mobile-work-content {
     display: flex;
     flex-direction: column;
@@ -823,10 +770,6 @@ body.drawer-open {
 
   .mobile-work-content .project-logo-aarsleff {
     height: 27px;
-  }
-
-  .mobile-work-content .project-logo-jyske {
-    height: 14px;
   }
 
   .mobile-work-content .project-title-row span {

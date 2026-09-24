@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LandingFooter from '../../components/landing/LandingFooter.astro';
+import LandingHeader from '../../components/landing/LandingHeader.astro';
+import CaseStudySection from '../../components/case-study/CaseStudySection.astro';
+import ProjectHighlights from '../../components/case-study/ProjectHighlights.astro';
+import ProjectIntro from '../../components/case-study/ProjectIntro.astro';
+import ScreenshotGallery from '../../components/case-study/ScreenshotGallery.astro';
+import TechnologyStack from '../../components/case-study/TechnologyStack.astro';
+import { pipeOverview } from '../../components/case-study/pipe-overview';
+import '../../styles/landing.css';
+import '../../styles/case-study.css';
+---
+
+<Layout
+  title="Pipe Overview Project Details | Frontend Freelance"
+  description="Frontend project details for Pipe Overview, an internal pipe-renovation planning application embedded in Aarsleff PipePro and Microsoft Dynamics 365."
+>
+  <LandingHeader />
+  <main id="main-content" tabindex="-1" class="case-study-page">
+    <ProjectIntro
+      eyebrow={pipeOverview.eyebrow}
+      title={pipeOverview.title}
+      description={pipeOverview.description}
+      facts={pipeOverview.facts}
+      logo={pipeOverview.logo}
+    />
+
+    <CaseStudySection
+      id="product"
+      eyebrow="Product view"
+      title="A structured view of project work."
+      description="Navigate the project tree and review editable pipe records in one view."
+    >
+      <ScreenshotGallery views={pipeOverview.views} mobileViews={pipeOverview.mobileViews} />
+    </CaseStudySection>
+
+    <CaseStudySection
+      id="overview"
+      eyebrow="Project overview"
+      title="A practical workspace for pipe-renovation delivery."
+      description="Pipe Overview keeps the project structure, pipe details, and inspection workflow connected within the existing PipePro environment."
+    >
+      <ProjectHighlights items={pipeOverview.highlights} />
+    </CaseStudySection>
+
+    <CaseStudySection
+      id="engineering"
+      eyebrow="Engineering notes"
+      title="A typed frontend integrated into PipePro."
+      description="The web resource connects the React interface to project and inspection services while fitting into the Dynamics 365 workflow."
+    >
+      <TechnologyStack items={pipeOverview.technologies} />
+    </CaseStudySection>
+  </main>
+  <LandingFooter />
+</Layout>

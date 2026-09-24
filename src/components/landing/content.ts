@@ -40,14 +40,6 @@ export const projects = [
     imageAlt: 'Aarsleff planning application screenshot',
     tag: 'AARSLEFF',
   },
-  {
-    title: 'Component library',
-    summary:
-      'Development of components for Jyske Bank website rebranding.',
-    image: '/jyske.webp',
-    imageAlt: 'Jyske Bank branding sample',
-    tag: 'JYSKE BANK',
-  },
 ];
 
 export const socialItems = [

@@ -4,7 +4,8 @@ import { navItems } from './content';
 const currentPath = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.replace(/\/$/, '');
 const navEntries = navItems.map((item) => {
   const href = item.href === '/' ? '/' : item.href.replace(/\/$/, '');
-  return { ...item, isActive: currentPath === href };
+  const isHomeProject = href === '/' && currentPath.startsWith('/projects/');
+  return { ...item, isActive: currentPath === href || isHomeProject };
 });
 ---
 
@@ -31,8 +32,8 @@ const navEntries = navItems.map((item) => {
 </header>
 
 <script>
-  const desktopNav = document.querySelector('.desktop-nav');
-  const navIndicator = document.querySelector('.nav-indicator');
+  const desktopNav = document.querySelector<HTMLElement>('.desktop-nav');
+  const navIndicator = document.querySelector<HTMLSpanElement>('.nav-indicator');
 
   const updateNavIndicator = () => {
     if (!desktopNav || !navIndicator) return;
@@ -53,10 +54,15 @@ const navEntries = navItems.map((item) => {
 
     desktopNav?.querySelectorAll<HTMLAnchorElement>('.nav-link').forEach((link) => {
       const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
-      const isActive = linkPath === currentPath;
+      const isHomeProject = linkPath === '/' && currentPath.startsWith('/projects/');
+      const isActive = linkPath === currentPath || isHomeProject;
 
       link.classList.toggle('is-active', isActive);
-      link.toggleAttribute('aria-current', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
     });
 
     updateNavIndicator();
