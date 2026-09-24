@@ -11,16 +11,17 @@ body {
     padding: 14px 0;
   }
 
-  .resume-header-main {
+  .resume-header-identity {
+    align-items: center;
+    display: flex;
     flex: 1;
+    gap: 18px;
     min-width: 0;
   }
 
-  .resume-header-side {
-    align-items: center;
-    display: flex;
-    gap: 14px;
-    justify-content: flex-end;
+  .resume-header-main {
+    flex: 1;
+    min-width: 0;
   }
 
   .resume-portrait-wrap {
@@ -58,7 +59,7 @@ body {
     letter-spacing: -0.06em;
     line-height: 1;
     margin: 8px 0 0;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .resume-contact {
@@ -180,14 +181,15 @@ body {
 
     .resume-entry,
     .resume-subentry {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-
-    /* entries that contain their own sub-entries (e.g. SYMFONI) may span pages */
-    .resume-entry:has(.resume-subentry) {
       break-inside: auto;
       page-break-inside: auto;
+    }
+
+    .resume-entry-header,
+    .resume-subentry > p:first-child,
+    .toolbox-category-header {
+      break-after: avoid;
+      page-break-after: avoid;
     }
 
     .resume-section h2 {
@@ -197,11 +199,6 @@ body {
 
     .resume-contact {
       font-size: 14px;
-    }
-
-    .toolbox-category {
-      break-inside: avoid;
-      page-break-inside: avoid;
     }
 
     .toolbox-category-table tr {
@@ -266,9 +263,7 @@ body {
   }
 
   .toolbox-category {
-    break-inside: avoid;
     margin-top: 14px;
-    page-break-inside: avoid;
     padding-top: 12px;
   }
 
@@ -333,10 +328,6 @@ body {
   }
 
   @media screen and (max-width: 850px) {
-    .resume-kicker {
-      padding-top: 12px;
-    }
-
     body {
       overflow-x: hidden;
     }
