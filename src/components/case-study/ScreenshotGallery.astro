@@ -1,9 +1,13 @@
 ---
+import { Picture } from 'astro:assets';
+import { getResponsiveImageWidths } from '../../utils/responsive-image-widths';
+import type { ImageMetadata } from 'astro';
+
 interface Screenshot {
   name: string;
   title: string;
   description: string;
-  image: string;
+  image: ImageMetadata;
   alt: string;
   width: number;
   height: number;
@@ -11,7 +15,7 @@ interface Screenshot {
 
 interface MobileScreenshot {
   name: string;
-  image: string;
+  image: ImageMetadata;
   alt: string;
   width: number;
   height: number;
@@ -23,6 +27,7 @@ interface Props {
 }
 
 const { views, mobileViews } = Astro.props;
+const gallerySizes = '(max-width: 1024px) calc(100vw - 48px), (max-width: 1440px) calc(100vw - 128px), 1312px';
 ---
 
 <div class="case-study-gallery" data-screenshot-gallery>
@@ -75,11 +80,15 @@ const { views, mobileViews } = Astro.props;
           <h3>{view.title}</h3>
           <p>{view.description}</p>
         </figcaption>
-        <img
+        <Picture
           src={view.image}
           alt={view.alt}
           width={view.width}
           height={view.height}
+          widths={getResponsiveImageWidths(view.width)}
+          sizes={gallerySizes}
+          formats={['avif', 'webp']}
+          quality={95}
           loading="lazy"
           decoding="async"
         />
@@ -96,11 +105,15 @@ const { views, mobileViews } = Astro.props;
       <div class="case-study-mobile-gallery" aria-label="Mobile product views">
         {mobileViews.map((view) => (
           <figure class="case-study-mobile-shot">
-            <img
+            <Picture
               src={view.image}
               alt={view.alt}
               width={view.width}
               height={view.height}
+              widths={getResponsiveImageWidths(view.width)}
+              sizes="(max-width: 298px) calc(100vw - 48px), 250px"
+              formats={['avif', 'webp']}
+              quality={95}
               loading="lazy"
               decoding="async"
             />

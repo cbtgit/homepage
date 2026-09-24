@@ -1,3 +1,8 @@
+import overviewImage from '../../assets/project-screenshots/pipe-overview/pipe-overview-overview.png';
+import uploadXmlImage from '../../assets/project-screenshots/pipe-overview/pipe-overview-upload-xml.png';
+import inspectedPipesImage from '../../assets/project-screenshots/pipe-overview/pipe-overview-inspected-pipes.png';
+import pipeActionsImage from '../../assets/project-screenshots/pipe-overview/pipe-overview-pipe-actions.png';
+
 export const pipeOverview = {
   eyebrow: 'Project details / Per Aarsleff Pipe Overview',
   title: 'One overview for complex pipe renovation projects.',
@@ -22,7 +27,7 @@ export const pipeOverview = {
       title: 'Project structure and pipe records in one working view',
       description:
         'The project tree, subproject controls, and pipe table keep the selected renovation work visible together.',
-      image: '/projects/pipe-overview/pipe-overview-overview.png',
+      image: overviewImage,
       alt: 'Pipe Overview showing its project tree, project controls, and pipe records for the selected project.',
       width: 2782,
       height: 1664,
@@ -32,7 +37,7 @@ export const pipeOverview = {
       title: 'Bring inspection files into the project workflow',
       description:
         'The upload dialog provides a drop zone and a list for managing inspection XML files before import.',
-      image: '/projects/pipe-overview/pipe-overview-upload-xml.png',
+      image: uploadXmlImage,
       alt: 'Pipe Overview XML upload dialog with a file drop zone and a list of inspection XML files.',
       width: 2782,
       height: 1664,
@@ -42,7 +47,7 @@ export const pipeOverview = {
       title: 'Review inspection results before adding pipes',
       description:
         'The inspected pipes table shows locations, dimensions, observations, and validation warnings for imported records.',
-      image: '/projects/pipe-overview/pipe-overview-inspected-pipes.png',
+      image: inspectedPipesImage,
       alt: 'Pipe Overview inspected pipes tab showing six imported pipe records with dimensions, observations, and warning icons.',
       width: 2782,
       height: 1664,
@@ -52,7 +57,7 @@ export const pipeOverview = {
       title: 'Manage work from the selected pipe',
       description:
         'The contextual menu provides actions for creating borders and work installations, turning pipes and laterals, renumbering, and managing warnings.',
-      image: '/projects/pipe-overview/pipe-overview-pipe-actions.png',
+      image: pipeActionsImage,
       alt: 'Pipe Overview project overview with a pipe selected and its contextual action menu open.',
       width: 2782,
       height: 1664,
@@ -92,8 +97,21 @@ export const pipeOverview = {
     },
     {
       category: 'Data',
+      name: 'TanStack DB',
+      description:
+        'On-demand collections and live queries keep pipe records filtered by the active project view, with edits persisted through API requests.',
+    },
+    {
+      category: 'API state',
       name: 'TanStack React Query',
-      description: 'Typed API queries and mutations with caching and synchronized server state.',
+      description:
+        'Manages the generated API queries and mutations, including request caching and server-state synchronization.',
+    },
+    {
+      category: 'API generation',
+      name: 'TypeScript OpenAPI Codegen',
+      description:
+        'Generates typed API schemas and React Query hooks for queries and mutations across the Pipes, Inspection Import, and Liner Order APIs.',
     },
     {
       category: 'Build',

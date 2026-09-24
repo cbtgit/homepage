@@ -1,3 +1,10 @@
+import globeFeatureImage from '../../assets/project-screenshots/unops/unops-live-projects-globe-feature.png';
+import chartFeatureImage from '../../assets/project-screenshots/unops/unops-live-projects-chart-feature.png';
+import tableFeatureImage from '../../assets/project-screenshots/unops/unops-live-projects-table-feature.png';
+import globeMobileImage from '../../assets/project-screenshots/unops/unops-live-projects-globe-mobile.png';
+import chartMobileImage from '../../assets/project-screenshots/unops/unops-live-projects-chart-mobile.png';
+import tableMobileImage from '../../assets/project-screenshots/unops/unops-live-projects-table-mobile.png';
+
 export const unopsDataPortal = {
   eyebrow: 'Project details / UNOPS Data Portal',
   title: 'A global data portal to explore projects for The United Nations',
@@ -35,7 +42,7 @@ export const unopsDataPortal = {
       title: 'An interactive globe for geographic discovery',
       description:
         'Mapbox rendering supports clustered project locations, changing detail by zoom level, and contextual access to the underlying records.',
-      image: '/projects/unops/unops-live-projects-globe-feature.png',
+      image: globeFeatureImage,
       alt: 'UNOPS projects globe view with clustered markers and project details beside the map.',
       width: 1166,
       height: 972,
@@ -45,7 +52,7 @@ export const unopsDataPortal = {
       title: 'Chart mode for distribution and comparison',
       description:
         'The chart view summarizes the current filtered selection, making it easier to compare regional proportions without leaving the route.',
-      image: '/projects/unops/unops-live-projects-chart-feature.png',
+      image: chartFeatureImage,
       alt: 'UNOPS projects chart view with a regional distribution chart and filter controls.',
       width: 1166,
       height: 972,
@@ -55,7 +62,7 @@ export const unopsDataPortal = {
       title: 'Table mode for record-level verification',
       description:
         'Sortable project records and export actions retain the same top-level filters used in globe and chart mode.',
-      image: '/projects/unops/unops-live-projects-table-feature.png',
+      image: tableFeatureImage,
       alt: 'UNOPS projects table showing project rows, countries, durations, SDG tags, and statuses.',
       width: 1166,
       height: 972,
@@ -64,21 +71,21 @@ export const unopsDataPortal = {
   mobileViews: [
     {
       name: 'Globe',
-      image: '/projects/unops/unops-live-projects-globe-mobile.png',
+      image: globeMobileImage,
       alt: 'UNOPS projects on mobile in globe mode with bottom navigation and clustered markers.',
       width: 348,
       height: 972,
     },
     {
       name: 'Chart',
-      image: '/projects/unops/unops-live-projects-chart-mobile.png',
+      image: chartMobileImage,
       alt: 'UNOPS projects on mobile in chart mode with bottom navigation and a regional pie chart.',
       width: 348,
       height: 972,
     },
     {
       name: 'Table',
-      image: '/projects/unops/unops-live-projects-table-mobile.png',
+      image: tableMobileImage,
       alt: 'UNOPS projects on mobile in table mode with a scrollable project list.',
       width: 348,
       height: 972,

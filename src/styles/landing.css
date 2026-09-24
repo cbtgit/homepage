@@ -464,7 +464,14 @@ body.drawer-open {
   height: 560px;
 }
 
-.project-card-featured > img {
+.project-card-featured > picture {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.project-card-featured > picture > img {
   height: 100%;
   inset: 0;
   object-fit: cover;
