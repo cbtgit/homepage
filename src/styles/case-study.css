@@ -470,9 +470,11 @@
     gap: 14px;
     grid-auto-columns: min(250px, calc(100vw - 48px));
     justify-content: start;
-    padding-inline: max(0px, calc((100% - min(250px, 100vw - 48px)) / 2));
-    scroll-padding-inline: max(0px, calc((100% - min(250px, 100vw - 48px)) / 2));
     width: 100%;
+  }
+
+  .case-study-mobile-shot {
+    scroll-snap-align: start;
   }
 }
 
