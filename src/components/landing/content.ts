@@ -10,7 +10,7 @@ export const navItems = [
 
 export const metaRows = [
   { label: 'Location', value: 'Aarhus, Denmark' },
-  { label: 'Availability', value: '1 September 2026' },
+  { label: 'Availability', value: '1 October 2026' },
   { label: 'Languages', value: 'Danish, English, German' },
 ];
 
@@ -23,14 +23,14 @@ export const technologies = [
   'Tailwind',
   'Vite',
   'TanStack',
-  'Copilot',
+  'GitHub Copilot',
 ];
 
 export const projects = [
   {
     title: 'United Nations data site',
     summary:
-      'UNOPS DATA visualizes project activity, partner coverage, and SDG reach across global regions, giving teams a clear view of delivery footprint and programme impact.',
+      'UNOPS DATA visualizes project activity, partner coverage, and SDG reach across global regions.',
     image: unopsOverviewImage,
     imageAlt: 'UNOPS Data project globe view with clustered locations and project details.',
     tag: 'UNOPS DATA',
