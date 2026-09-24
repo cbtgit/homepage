@@ -9,7 +9,7 @@ export const unopsDataPortal = {
   eyebrow: 'Project details / UNOPS Data Portal',
   title: 'A global data portal to explore projects for The United Nations',
   description:
-    'The UNOPS Data Portal is a React and TypeScript application for exploring United Nations Office for Project Services data across countries, partners, and Sustainable Development Goals. The site is fully managed through Craft CMS, which supplies the page configuration and content rendered by the frontend. The same dataset is available through globe, chart, and table views, with filters and route state carried across each experience.',
+    'The UNOPS Data Portal is a React application for exploring United Nations Office for Project Services data across countries, partners, and Sustainable Development Goals. The site is fully managed through Craft CMS, which supplies the page configuration and content rendered by the frontend. The same dataset is available through globe, chart, and table views, with filters and route state carried across each experience.',
   facts: [
     { label: 'Role', value: 'Senior frontend developer' },
     { label: 'Focus', value: 'Architecture and implementation' },

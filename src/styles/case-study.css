@@ -90,7 +90,6 @@
 
 .case-study-section-heading {
   margin-bottom: 28px;
-  max-width: 850px;
 }
 
 .case-study-section-heading .eyebrow {
@@ -102,6 +101,7 @@
   font-weight: 800;
   line-height: 1.12;
   margin: 0;
+  max-width: 850px;
 }
 
 .case-study-section-description {
@@ -109,7 +109,6 @@
   font-size: 18px;
   line-height: 1.6;
   margin: 14px 0 0;
-  max-width: 720px;
 }
 
 .case-study-highlights,
@@ -268,10 +267,6 @@
 
 .case-study-gallery-caption .eyebrow {
   margin-bottom: 10px;
-}
-
-.case-study-gallery-caption > p:last-child {
-  max-width: 700px;
 }
 
 .case-study-product-shot {

@@ -10,7 +10,7 @@ export const navItems = [
 
 export const metaRows = [
   { label: 'Location', value: 'Aarhus, Denmark' },
-  { label: 'Availability', value: '1 September 2026' },
+  { label: 'Availability', value: '1 October 2026' },
   { label: 'Languages', value: 'Danish, English, German' },
 ];
 
