@@ -250,6 +250,11 @@
   display: none;
 }
 
+.case-study-gallery-panel picture,
+.case-study-mobile-shot picture {
+  display: block;
+}
+
 .case-study-gallery-panel img {
   background: var(--surface-page);
   display: block;

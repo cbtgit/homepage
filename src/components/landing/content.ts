@@ -1,3 +1,6 @@
+import unopsOverviewImage from '../../assets/project-screenshots/unops/unops-live-projects-globe-feature.png';
+import pipeOverviewImage from '../../assets/project-screenshots/pipe-overview/pipe-overview-overview.png';
+
 export const navItems = [
   { label: 'Home', href: '/' },
   // { label: 'Projects', href: '/#work' },
@@ -28,16 +31,16 @@ export const projects = [
     title: 'United Nations data site',
     summary:
       'UNOPS DATA visualizes project activity, partner coverage, and SDG reach across global regions, giving teams a clear view of delivery footprint and programme impact.',
-    image: '/globe.webp',
-    imageAlt: 'UNOPS data visual identity',
+    image: unopsOverviewImage,
+    imageAlt: 'UNOPS Data project globe view with clustered locations and project details.',
     tag: 'UNOPS DATA',
   },
   {
     title: 'Project planning application',
     summary:
       'Internal business application for Aarsleff Pipe Technologies for managing pipe renovation projects.',
-    image: '/PAA.webp',
-    imageAlt: 'Aarsleff planning application screenshot',
+    image: pipeOverviewImage,
+    imageAlt: 'Pipe Overview project tree and pipe records in the project overview.',
     tag: 'AARSLEFF',
   },
 ];

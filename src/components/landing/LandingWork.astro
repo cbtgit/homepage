@@ -1,7 +1,10 @@
 ---
+import { Picture } from 'astro:assets';
 import { projects } from './content';
+import { getResponsiveImageWidths } from '../../utils/responsive-image-widths';
 
 const [featured, secondary] = projects;
+const cardImageSizes = '(max-width: 1440px) calc((100vw - 192px) / 2), 624px';
 ---
 
 <section class="work" id="work">
@@ -13,7 +16,18 @@ const [featured, secondary] = projects;
 
     <div class="work-grid-desktop">
       <article class="project-card-featured">
-        <img src={featured.image} alt={featured.imageAlt} width="776" height="469" loading="lazy" />
+        <Picture
+          src={featured.image}
+          alt={featured.imageAlt}
+          width={featured.image.width}
+          height={featured.image.height}
+          widths={getResponsiveImageWidths(featured.image.width)}
+          sizes={cardImageSizes}
+          formats={['avif', 'webp']}
+          quality={95}
+          loading="lazy"
+          decoding="async"
+        />
         <div class="project-caption project-caption-featured">
           <div class="project-title-row">
             <h3>{featured.title}</h3>
@@ -25,7 +39,18 @@ const [featured, secondary] = projects;
       </article>
 
       <article class="project-card-featured">
-        <img src={secondary.image} alt={secondary.imageAlt} width="440" height="297" loading="lazy" />
+        <Picture
+          src={secondary.image}
+          alt={secondary.imageAlt}
+          width={secondary.image.width}
+          height={secondary.image.height}
+          widths={getResponsiveImageWidths(secondary.image.width)}
+          sizes={cardImageSizes}
+          formats={['avif', 'webp']}
+          quality={95}
+          loading="lazy"
+          decoding="async"
+        />
         <div class="project-caption project-caption-featured">
           <div class="project-title-row">
             <h3>{secondary.title}</h3>
