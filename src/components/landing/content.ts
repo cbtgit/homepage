@@ -30,7 +30,7 @@ export const projects = [
   {
     title: 'United Nations data site',
     summary:
-      'UNOPS DATA visualizes project activity, partner coverage, and SDG reach across global regions, giving teams a clear view of delivery footprint and programme impact.',
+      'UNOPS DATA visualizes project activity, partner coverage, and SDG reach across global regions.',
     image: unopsOverviewImage,
     imageAlt: 'UNOPS Data project globe view with clustered locations and project details.',
     tag: 'UNOPS DATA',
