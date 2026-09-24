@@ -1,0 +1,23 @@
+---
+interface Technology {
+  category: string;
+  name: string;
+  description: string;
+}
+
+interface Props {
+  items: Technology[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="case-study-technology-list">
+  {items.map((technology) => (
+    <li class="case-study-technology">
+      <p class="eyebrow">{technology.category}</p>
+      <h3>{technology.name}</h3>
+      <p>{technology.description}</p>
+    </li>
+  ))}
+</ul>

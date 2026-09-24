@@ -1,0 +1,23 @@
+---
+interface Highlight {
+  eyebrow: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  items: Highlight[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="case-study-highlights">
+  {items.map((item) => (
+    <article class="case-study-highlight">
+      <p class="eyebrow">{item.eyebrow}</p>
+      <h3>{item.title}</h3>
+      <p>{item.description}</p>
+    </article>
+  ))}
+</div>

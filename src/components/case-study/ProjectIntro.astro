@@ -1,0 +1,59 @@
+---
+interface Fact {
+  label: string;
+  value: string;
+}
+
+interface ProjectLogo {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  tabletWidth: number;
+  mobileWidth: number;
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  facts: Fact[];
+  logo: ProjectLogo;
+  liveUrl?: string;
+}
+
+const { eyebrow, title, description, facts, logo, liveUrl } = Astro.props;
+---
+
+<section class="case-study-hero page-container" aria-labelledby="case-study-title">
+  <div
+    class="case-study-hero-main"
+    style={`--case-study-logo-width: ${logo.width}px; --case-study-logo-tablet-width: ${logo.tabletWidth}px; --case-study-logo-mobile-width: ${logo.mobileWidth}px;`}
+  >
+    <div class="case-study-hero-copy">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1 id="case-study-title">{title}</h1>
+      <p class="case-study-lead">{description}</p>
+      <div class="case-study-actions">
+        {liveUrl && <a class="cta" href={liveUrl}>View the live portal</a>}
+        <a class="case-study-text-link" href="#overview">Explore project details</a>
+      </div>
+    </div>
+    <img
+      class="case-study-logo"
+      src={logo.src}
+      alt={logo.alt}
+      width={logo.width}
+      height={logo.height}
+    />
+  </div>
+
+  <dl class="case-study-facts">
+    {facts.map((fact) => (
+      <div class="case-study-fact">
+        <dt>{fact.label}</dt>
+        <dd>{fact.value}</dd>
+      </div>
+    ))}
+  </dl>
+</section>

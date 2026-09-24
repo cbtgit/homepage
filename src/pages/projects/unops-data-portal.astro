@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LandingFooter from '../../components/landing/LandingFooter.astro';
+import LandingHeader from '../../components/landing/LandingHeader.astro';
+import CaseStudySection from '../../components/case-study/CaseStudySection.astro';
+import ProjectHighlights from '../../components/case-study/ProjectHighlights.astro';
+import ProjectIntro from '../../components/case-study/ProjectIntro.astro';
+import ScreenshotGallery from '../../components/case-study/ScreenshotGallery.astro';
+import TechnologyStack from '../../components/case-study/TechnologyStack.astro';
+import { unopsDataPortal } from '../../components/case-study/unops-data-portal';
+import '../../styles/landing.css';
+import '../../styles/case-study.css';
+---
+
+<Layout
+  title="UNOPS Data Portal Project Details | Frontend Freelance"
+  description="Frontend engineering project details for the UNOPS Data Portal, a React and TypeScript experience for exploring global project data through globe, chart, and table views."
+>
+  <LandingHeader />
+  <main id="main-content" tabindex="-1" class="case-study-page">
+    <ProjectIntro
+      eyebrow={unopsDataPortal.eyebrow}
+      title={unopsDataPortal.title}
+      description={unopsDataPortal.description}
+      facts={unopsDataPortal.facts}
+      logo={{
+        src: '/unops-data.svg',
+        alt: 'UNOPS Data',
+        width: 223,
+        height: 26,
+        tabletWidth: 260,
+        mobileWidth: 234,
+      }}
+      liveUrl={unopsDataPortal.liveUrl}
+    />
+
+    <CaseStudySection
+      id="product"
+      eyebrow="Product walkthrough"
+      title="Globe, chart, and table views share a common filter model."
+      description="Switch between discovery, comparison, and record-level detail without losing the current selection."
+    >
+      <ScreenshotGallery views={unopsDataPortal.views} mobileViews={unopsDataPortal.mobileViews} />
+    </CaseStudySection>
+
+    <CaseStudySection
+      id="overview"
+      eyebrow="Project overview"
+      title="One project dataset, explored from several angles."
+      description="The interface connects broad geographic patterns to individual project records, with context carried between each view."
+    >
+      <ProjectHighlights items={unopsDataPortal.highlights} />
+    </CaseStudySection>
+
+    <CaseStudySection
+      id="engineering"
+      eyebrow="Engineering notes"
+      title="Specialized tools around a configurable frontend."
+      description="The implementation combines a CMS-driven page model with focused libraries for routing, data state, mapping, charts, and browser testing."
+    >
+      <TechnologyStack items={unopsDataPortal.technologies} />
+    </CaseStudySection>
+  </main>
+  <LandingFooter />
+</Layout>

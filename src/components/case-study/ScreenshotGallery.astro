@@ -1,0 +1,119 @@
+---
+interface Screenshot {
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+interface MobileScreenshot {
+  name: string;
+  image: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+interface Props {
+  views: Screenshot[];
+  mobileViews: MobileScreenshot[];
+}
+
+const { views, mobileViews } = Astro.props;
+---
+
+<div class="case-study-gallery" data-screenshot-gallery>
+  {views.length > 1 && (
+    <>
+      <div class="case-study-gallery-controls">
+        <button class="case-study-gallery-arrow" type="button" data-gallery-previous aria-label="Previous product view">
+          Previous
+        </button>
+        <div class="case-study-gallery-tabs" role="tablist" aria-label="Product views">
+          {views.map((view, index) => (
+            <button
+              class="case-study-gallery-tab"
+              id={`product-view-tab-${index}`}
+              type="button"
+              role="tab"
+              aria-selected={index === 0 ? 'true' : 'false'}
+              aria-controls={`product-view-panel-${index}`}
+              tabindex={index === 0 ? 0 : -1}
+              data-gallery-tab
+            >
+              {view.name}
+            </button>
+          ))}
+        </div>
+        <button class="case-study-gallery-arrow" type="button" data-gallery-next aria-label="Next product view">
+          Next
+        </button>
+      </div>
+
+      <p class="case-study-gallery-status" aria-live="polite" aria-atomic="true" data-gallery-status>
+        {views[0].name} view, 1 of {views.length}
+      </p>
+    </>
+  )}
+
+  <div class="case-study-gallery-panels">
+    {views.map((view, index) => (
+      <figure
+        class="case-study-gallery-panel"
+        id={`product-view-panel-${index}`}
+        role={views.length > 1 ? 'tabpanel' : undefined}
+        aria-labelledby={views.length > 1 ? `product-view-tab-${index}` : undefined}
+        tabindex={views.length > 1 ? 0 : undefined}
+        data-gallery-panel
+        hidden={index !== 0}
+      >
+        <figcaption class="case-study-gallery-caption">
+          <p class="eyebrow">{`View 0${index + 1} / ${view.name}`}</p>
+          <h3>{view.title}</h3>
+          <p>{view.description}</p>
+        </figcaption>
+        <img
+          src={view.image}
+          alt={view.alt}
+          width={view.width}
+          height={view.height}
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    ))}
+  </div>
+
+  {mobileViews.length > 0 && (
+    <div class="case-study-mobile-views">
+      <div class="case-study-mobile-heading">
+        <h3>Designed for mobile use</h3>
+        <p>Navigation and view switching adapt to a smaller screen while keeping the same routes and data.</p>
+      </div>
+      <div class="case-study-mobile-gallery" aria-label="Mobile product views">
+        {mobileViews.map((view) => (
+          <figure class="case-study-mobile-shot">
+            <img
+              src={view.image}
+              alt={view.alt}
+              width={view.width}
+              height={view.height}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>{view.name} view</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
+
+<script>
+  import { initializeCaseStudyGalleries } from '../../scripts/case-study-gallery';
+
+  document.addEventListener('astro:page-load', initializeCaseStudyGalleries);
+</script>
