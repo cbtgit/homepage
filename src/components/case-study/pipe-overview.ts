@@ -29,8 +29,6 @@ export const pipeOverview = {
         'The project tree, subproject controls, and pipe table keep the selected renovation work visible together.',
       image: overviewImage,
       alt: 'Pipe Overview showing its project tree, project controls, and pipe records for the selected project.',
-      width: 2782,
-      height: 1664,
     },
     {
       name: 'XML upload',
@@ -39,8 +37,6 @@ export const pipeOverview = {
         'The upload dialog provides a drop zone and a list for managing inspection XML files before import.',
       image: uploadXmlImage,
       alt: 'Pipe Overview XML upload dialog with a file drop zone and a list of inspection XML files.',
-      width: 2782,
-      height: 1664,
     },
     {
       name: 'Inspected pipes',
@@ -49,8 +45,6 @@ export const pipeOverview = {
         'The inspected pipes table shows locations, dimensions, observations, and validation warnings for imported records.',
       image: inspectedPipesImage,
       alt: 'Pipe Overview inspected pipes tab showing six imported pipe records with dimensions, observations, and warning icons.',
-      width: 2782,
-      height: 1664,
     },
     {
       name: 'Pipe actions',
@@ -59,8 +53,6 @@ export const pipeOverview = {
         'The contextual menu provides actions for creating borders and work installations, turning pipes and laterals, renumbering, and managing warnings.',
       image: pipeActionsImage,
       alt: 'Pipe Overview project overview with a pipe selected and its contextual action menu open.',
-      width: 2782,
-      height: 1664,
     },
   ],
   mobileViews: [],

@@ -44,8 +44,6 @@ export const unopsDataPortal = {
         'Mapbox rendering supports clustered project locations, changing detail by zoom level, and contextual access to the underlying records.',
       image: globeFeatureImage,
       alt: 'UNOPS projects globe view with clustered markers and project details beside the map.',
-      width: 1166,
-      height: 972,
     },
     {
       name: 'Chart',
@@ -54,8 +52,6 @@ export const unopsDataPortal = {
         'The chart view summarizes the current filtered selection, making it easier to compare regional proportions without leaving the route.',
       image: chartFeatureImage,
       alt: 'UNOPS projects chart view with a regional distribution chart and filter controls.',
-      width: 1166,
-      height: 972,
     },
     {
       name: 'Table',
@@ -64,8 +60,6 @@ export const unopsDataPortal = {
         'Sortable project records and export actions retain the same top-level filters used in globe and chart mode.',
       image: tableFeatureImage,
       alt: 'UNOPS projects table showing project rows, countries, durations, SDG tags, and statuses.',
-      width: 1166,
-      height: 972,
     },
   ],
   mobileViews: [
@@ -73,22 +67,16 @@ export const unopsDataPortal = {
       name: 'Globe',
       image: globeMobileImage,
       alt: 'UNOPS projects on mobile in globe mode with bottom navigation and clustered markers.',
-      width: 348,
-      height: 972,
     },
     {
       name: 'Chart',
       image: chartMobileImage,
       alt: 'UNOPS projects on mobile in chart mode with bottom navigation and a regional pie chart.',
-      width: 348,
-      height: 972,
     },
     {
       name: 'Table',
       image: tableMobileImage,
       alt: 'UNOPS projects on mobile in table mode with a scrollable project list.',
-      width: 348,
-      height: 972,
     },
   ],
   technologies: [

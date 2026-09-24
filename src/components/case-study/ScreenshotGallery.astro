@@ -9,16 +9,12 @@ interface Screenshot {
   description: string;
   image: ImageMetadata;
   alt: string;
-  width: number;
-  height: number;
 }
 
 interface MobileScreenshot {
   name: string;
   image: ImageMetadata;
   alt: string;
-  width: number;
-  height: number;
 }
 
 interface Props {
@@ -83,9 +79,9 @@ const gallerySizes = '(max-width: 1024px) calc(100vw - 48px), (max-width: 1440px
         <Picture
           src={view.image}
           alt={view.alt}
-          width={view.width}
-          height={view.height}
-          widths={getResponsiveImageWidths(view.width)}
+          width={view.image.width}
+          height={view.image.height}
+          widths={getResponsiveImageWidths(view.image.width)}
           sizes={gallerySizes}
           formats={['avif', 'webp']}
           quality={95}
@@ -108,9 +104,9 @@ const gallerySizes = '(max-width: 1024px) calc(100vw - 48px), (max-width: 1440px
             <Picture
               src={view.image}
               alt={view.alt}
-              width={view.width}
-              height={view.height}
-              widths={getResponsiveImageWidths(view.width)}
+              width={view.image.width}
+              height={view.image.height}
+              widths={getResponsiveImageWidths(view.image.width)}
               sizes="(max-width: 298px) calc(100vw - 48px), 250px"
               formats={['avif', 'webp']}
               quality={95}
