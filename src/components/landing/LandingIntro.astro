@@ -1,16 +1,16 @@
 ---
-import { metaRows, technologies } from './content';
+import { metaRows, technologies } from "./content";
 
 const desktopTechnologies = [
-  { name: 'HTML', icon: '/tech-icons/html.svg', size: 'small' },
-  { name: 'CSS', icon: '/tech-icons/css.svg', size: 'small' },
-  { name: 'JavaScript', icon: '/tech-icons/javascript.svg', size: 'small' },
-  { name: 'TypeScript', icon: '/tech-icons/typescript.svg', size: 'small' },
-  { name: 'React', icon: '/tech-icons/react.svg', size: 'large' },
-  { name: 'Tailwind', icon: '/tech-icons/tailwind.svg', size: 'large' },
-  { name: 'Vite', icon: '/tech-icons/vite.svg', size: 'large' },
-  { name: 'TanStack', icon: '/tech-icons/tanstack.svg', size: 'large' },
-  { name: 'GitHub Copilot', icon: '/tech-icons/copilot.svg', size: 'large' },
+  { name: "HTML", icon: "/tech-icons/html.svg", size: "small" },
+  { name: "CSS", icon: "/tech-icons/css.svg", size: "small" },
+  { name: "JavaScript", icon: "/tech-icons/javascript.svg", size: "small" },
+  { name: "TypeScript", icon: "/tech-icons/typescript.svg", size: "small" },
+  { name: "React", icon: "/tech-icons/react.svg", size: "large" },
+  { name: "Tailwind", icon: "/tech-icons/tailwind.svg", size: "large" },
+  { name: "Vite", icon: "/tech-icons/vite.svg", size: "large" },
+  { name: "TanStack", icon: "/tech-icons/tanstack.svg", size: "large" },
+  { name: "GitHub Copilot", icon: "/tech-icons/copilot.svg", size: "large" },
 ];
 ---
 
@@ -30,7 +30,15 @@ const desktopTechnologies = [
       <a class="cta" href="#work">View Recent Projects</a>
     </div>
     <div class="hero-portrait-col">
-      <img class="hero-photo" src="/cth.jpg" alt="Christian Bloch Thomsen portrait" width="375" height="250" loading="eager" fetchpriority="high" />
+      <img
+        class="hero-photo"
+        src="/cth.jpg"
+        alt="Christian Bloch Thomsen portrait"
+        width="375"
+        height="250"
+        loading="eager"
+        fetchpriority="high"
+      />
     </div>
   </div>
 </section>
@@ -41,89 +49,178 @@ const desktopTechnologies = [
     <div class="about-grid">
       <article class="about-text-card">
         <p>
-          More than 25 years of frontend development experience and over 15 years
-          of consulting experience shape my work as a senior frontend developer.
-          Since 2022, I have worked as an independent freelancer.
+          Hello, I'm Christian - a senior frontend developer based in Denmark
+          with over 25 years of software development experience, including 15
+          years in technical consulting.
+        </p>
+
+        <p>
+          My work spans public-facing web sites as well as complex internal
+          business web applications. Along with hands-on UI development, my
+          focus is also on making the foundational technical choices needed for
+          a successful frontend solution — without making things more
+          complicated than they need to be. Simplicity and maintainability are
+          guiding principles for my work.
+        </p>
+
+        <p>
+          When joining existing teams, I adapt easily and focus on predictable,
+          self-managed delivery, while helping out teammates and filling in gaps
+          where needed.
         </p>
         <p>
-          My work spans public-facing websites, complex internal business
-          applications, frontend architecture, and development workflows, so I
-          bring a broad perspective across the frontend stack.
+          Since starting as a freelancer in 2022, I have delivered projects for
+          major domestic and international organisations, including the United
+          Nations, Jyske Bank, and Denmark's largest construction and
+          contracting company, Per Aarsleff.
         </p>
-        <p>
-          My guiding principles when working on an assignment are delivering quality
-          work, reliable delivery, and making a useful contribution to the team I join.
-        </p>
-        <p>
-          If you are looking for someone with international experience, I worked in
-          San Francisco for a number of years and recently delivered a project for the
-          United Nations Office for Project Services (UNOPS).
-        </p>
-        <p>
-          I use AI development tools in my work, but always guided by sound
-          engineering judgment.
-        </p>
+
         <a class="cta" href="/resume.pdf" download>Download My Resume</a>
       </article>
 
       <div class="about-side">
         <article class="meta-card">
-          {metaRows.map((row) => (
-            <div class="meta-row">
-              <div class="meta-row-label">
-                <span class="meta-row-icon" aria-hidden="true">
-                  {row.label === "Location" && (
-                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                      <circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8" />
-                    </svg>
-                  )}
-                  {row.label === "Availability" && (
-                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
-                      <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                    </svg>
-                  )}
-                  {row.label === "Languages" && (
-                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4 6h10M9 6c0 4-2 7-5 9M9 6c0 3 1.6 6 4 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="m14 19 2.5-7 2.5 7M14.8 17h3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  )}
-                </span>
-                <span class="meta-row-text">{row.label}</span>
+          {
+            metaRows.map((row) => (
+              <div class="meta-row">
+                <div class="meta-row-label">
+                  <span class="meta-row-icon" aria-hidden="true">
+                    {row.label === "Location" && (
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <circle
+                          cx="12"
+                          cy="10"
+                          r="2.6"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                        />
+                      </svg>
+                    )}
+                    {row.label === "Availability" && (
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="3"
+                          y="5"
+                          width="18"
+                          height="16"
+                          rx="2"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                        />
+                        <path
+                          d="M3 10h18M8 3v4M16 3v4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    )}
+                    {row.label === "Languages" && (
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4 6h10M9 6c0 4-2 7-5 9M9 6c0 3 1.6 6 4 8"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="m14 19 2.5-7 2.5 7M14.8 17h3.4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    )}
+                  </span>
+                  <span class="meta-row-text">{row.label}</span>
+                </div>
+                <span class="meta-row-value">{row.value}</span>
               </div>
-              <span class="meta-row-value">{row.value}</span>
-            </div>
-          ))}
+            ))
+          }
         </article>
 
         <article class="tech-card desktop-tech-card">
           <header class="desktop-tech-header">
             <span class="desktop-tech-header-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="m16 18 6-6-6-6" fill="none" stroke="#55B7CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="m8 6-6 6 6 6" fill="none" stroke="#55B7CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="m14.5 4-5 16" fill="none" stroke="#55B7CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m16 18 6-6-6-6"
+                  fill="none"
+                  stroke="#55B7CF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="m8 6-6 6 6 6"
+                  fill="none"
+                  stroke="#55B7CF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="m14.5 4-5 16"
+                  fill="none"
+                  stroke="#55B7CF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
               </svg>
             </span>
             <h3 class="desktop-tech-title">Primary Technologies</h3>
           </header>
 
           <ul class="desktop-tech-grid">
-            {desktopTechnologies.map((tech) => (
-              <li class="desktop-tech-tile">
-                <img
-                  class={`desktop-tech-icon ${tech.size === 'large' ? 'is-large' : 'is-small'}`}
-                  src={tech.icon}
-                  width={tech.size === 'large' ? 28 : 26}
-                  height={tech.size === 'large' ? 28 : 26}
-                    alt={tech.name + ' logo'}
-                  loading="lazy"
-                />
-                <span>{tech.name}</span>
-              </li>
-            ))}
+            {
+              desktopTechnologies.map((tech) => (
+                <li class="desktop-tech-tile">
+                  <img
+                    class={`desktop-tech-icon ${tech.size === "large" ? "is-large" : "is-small"}`}
+                    src={tech.icon}
+                    width={tech.size === "large" ? 28 : 26}
+                    height={tech.size === "large" ? 28 : 26}
+                    alt={tech.name + " logo"}
+                    loading="lazy"
+                  />
+                  <span>{tech.name}</span>
+                </li>
+              ))
+            }
           </ul>
         </article>
       </div>
@@ -141,7 +238,15 @@ const desktopTechnologies = [
           <span class="hero-line hero-line-dark">SENIOR DEVELOPER</span>
         </h1>
       </div>
-      <img class="mobile-photo" src="/cth.jpg" alt="Christian Bloch Thomsen portrait" width="375" height="250" loading="eager" fetchpriority="high" />
+      <img
+        class="mobile-photo"
+        src="/cth.jpg"
+        alt="Christian Bloch Thomsen portrait"
+        width="375"
+        height="250"
+        loading="eager"
+        fetchpriority="high"
+      />
     </header>
 
     <p>
@@ -151,49 +256,107 @@ const desktopTechnologies = [
       development workflows.
     </p>
 
-      <div class="mobile-actions">
-        <a href="/resume.pdf" download>Resume</a>
-        <a href="/resume.pdf" download>Get In Touch</a>
-      </div>
+    <div class="mobile-actions">
+      <a href="/resume.pdf" download>Resume</a>
+      <a href="/contact">Get In Touch</a>
+    </div>
   </article>
 
   <article class="meta-card">
-    {metaRows.map((row) => (
-            <div class="meta-row">
-              <div class="meta-row-label">
-                <span class="meta-row-icon" aria-hidden="true">
-                  {row.label === "Location" && (
-                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                      <circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8" />
-                    </svg>
-                  )}
-                  {row.label === "Availability" && (
-                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
-                      <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                    </svg>
-                  )}
-                  {row.label === "Languages" && (
-                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4 6h10M9 6c0 4-2 7-5 9M9 6c0 3 1.6 6 4 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="m14 19 2.5-7 2.5 7M14.8 17h3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  )}
-                </span>
-                <span class="meta-row-text">{row.label}</span>
-              </div>
-              <span class="meta-row-value">{row.value}</span>
-            </div>
-          ))}
+    {
+      metaRows.map((row) => (
+        <div class="meta-row">
+          <div class="meta-row-label">
+            <span class="meta-row-icon" aria-hidden="true">
+              {row.label === "Location" && (
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="12"
+                    cy="10"
+                    r="2.6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              )}
+              {row.label === "Availability" && (
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="16"
+                    rx="2"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M3 10h18M8 3v4M16 3v4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              )}
+              {row.label === "Languages" && (
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h10M9 6c0 4-2 7-5 9M9 6c0 3 1.6 6 4 8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="m14 19 2.5-7 2.5 7M14.8 17h3.4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              )}
+            </span>
+            <span class="meta-row-text">{row.label}</span>
+          </div>
+          <span class="meta-row-value">{row.value}</span>
+        </div>
+      ))
+    }
   </article>
 
   <article class="tech-card">
     <h2>Primary technologies</h2>
     <ul>
-      {technologies.map((tech) => (
-        <li>{tech}</li>
-      ))}
+      {technologies.map((tech) => <li>{tech}</li>)}
     </ul>
   </article>
 </section>
